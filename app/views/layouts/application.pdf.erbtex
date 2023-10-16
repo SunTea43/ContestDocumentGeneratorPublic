@@ -1,0 +1,8 @@
+<% @latex_config={:parse_runs => 2} %>
+\documentclass{usa_syllabus}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage[defaultbib,breakcites]{bibtopic}
+\begin{document}
+<%= yield %>
+\end{document}

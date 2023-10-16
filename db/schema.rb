@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_10_013625) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_16_165546) do
   create_table "team_members", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -24,6 +24,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_10_013625) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "username"
+    t.string "password"
+    t.string "room"
   end
 
   add_foreign_key "team_members", "teams"

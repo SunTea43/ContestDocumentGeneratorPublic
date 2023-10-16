@@ -62,6 +62,7 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem 'byebug', '~> 9.0', '>= 9.0.6'
 end
 
 group :test do
@@ -70,3 +71,8 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+# LaTeX Gem
+gem 'rails-latex', :git => 'git@github.com:amagical-net/rails-latex.git', branch: :master
+
+# Roo Gem
+gem 'roo', '~> 2.4'

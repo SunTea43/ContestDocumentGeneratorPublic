@@ -1,0 +1,121 @@
+<%@teams.each do |team|%>
+    \maketitle
+    \chapter*{Instrucciones}
+    \begin{tabular}{|p{0.2\textwidth}|p{0.7\textwidth}|}
+        \hline
+        Pagina web & \url{https://www.cetulu.top/domjudge}  \\
+        \hline
+        Salón Asignado & <%= lesc(team.room)%> \\
+        \hline
+        Equipo &  <%=lesc(team.name)%>\\
+        \hline
+        Usuario & <%=lesc(team.username)%> \\
+        \hline
+        Contraseña &  <%=lesc(team.password)%>\\
+        \hline 
+    \end{tabular}
+
+    \section{\textbf{Restricciones durante la maratón}}
+
+    \begin{itemize}
+        \item Los participantes deberán permanecer en sus lugares designados durante todo el transcurso de la competencia, salvo en casos de emergencia.
+
+        \item Se permitirá el uso de libros de referencia, manuales y documentación física, siempre y cuando se utilicen de manera ética y adecuada.
+
+        \item No se permitirá la comunicación entre los equipos participantes.
+
+        \item El plagio de códigos o soluciones está estrictamente prohibido y será motivo de descalificación inmediata.
+
+        \item Los participantes deberán seguir las instrucciones y directrices de los jueces y organizadores de la competencia en todo momento.
+
+        \item Cualquier conducta antideportiva o inapropiada será motivo de sanción o descalificación de la competencia, a discreción de los organizadores y jueces.
+    \end{itemize}
+
+    \section{\textbf{Domjugde}}
+
+    \subsection{\textbf{Puntuación}}
+
+    \noindent
+    El formato de calificación de DOMjudge varía ligeramente dependiendo de la competición o evento, para el caso de la Maratón de programación incluyen lo siguiente:
+    \begin{itemize}
+        \item Todos los ejercicios tendrán un valor de 1 punto sin importar la dificultad del problema. 
+        \item Cada equipo recibe una puntuación para cada problema que resuelven correctamente. Esta puntuación es igual a la puntuación máxima del problema. Es de aclarar que no se penalizará por intento fallido.
+        \item La puntuación tiene un formato de puntuación por tiempo de entrega, donde la calificación dependerá del tiempo en el que se envía la solución. Por lo tanto, el equipo con menor puntuación será el equipo con mayor calificación, ya que entrego la mayor cantidad de ejercicios en un menor tiempo.
+        
+    \end{itemize}
+
+    \subsection{\textbf{Posibles resultados}}
+
+    \begingroup
+    \setlength{\tabcolsep}{10pt}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{center}
+    \begin{tabular}{c c}
+
+    \textbf{CORRECT}& \parbox{12cm}{El envío ha superado todas las pruebas: ¡ha resuelto el problema! Los envíos correctos no conllevan tiempo de penalización.} \\
+
+    \hline 
+
+    \textbf{COMPILER-ERROR}& \parbox{12cm}{Hubo un error al compilar tu programa. En la página de detalles del envío, puedes inspeccionar el error exacto (esta opción puede estar desactivada). Ten en cuenta que cuando la compilación lleva más de 30 segundos, se interrumpe y esto se considera como un error de compilación. Los errores de compilación no generan tiempo de penalización.} \\
+
+    \hline 
+
+    \textbf{TIMELIMIT}& \parbox{12cm}{Tu programa tardó más tiempo del máximo permitido para este problema. Por lo tanto, se ha interrumpido. Esto puede indicar que tu programa se queda en un bucle o que tu solución no es lo suficientemente eficiente.} \\
+
+    \hline 
+
+    \textbf{RUN-ERROR}& \parbox{12cm}{Se produjo un error durante la ejecución de tu programa. Esto puede tener muchas causas diferentes, como la división por cero, el acceso incorrecto a la memoria (por ejemplo, indexando arrays fuera de límites), intentar usar más memoria de la permitida, etc. ¡También verifica que tu programa se cierre con el código de salida 0!} \\
+
+    \hline 
+
+    \textbf{NO-OUTPUT}& \parbox{12cm}{Tu programa no generó ninguna salida. Verifica que escribas en la salida estándar (standard output).} \\
+
+    \hline 
+
+    \textbf{OUTPUT-LIMIT}& \parbox{12cm}{Tu programa generó más salida de la cantidad máxima permitida. La salida se truncó y se consideró incorrecta.} \\
+
+    \hline 
+
+    \textbf{WRONG-ANSWER}& \parbox{12cm}{La salida de tu programa es incorrecta. Esto puede suceder simplemente porque tu solución no es correcta, pero recuerda que tu salida debe cumplir exactamente con las especificaciones de los jueces. Consulta la sección \ref{restricciones} a continuación para obtener más detalles.} \\
+
+    \hline 
+
+    \textbf{TOO-LATE}& \parbox{12cm}{¡Qué lástima! ¡Has enviado después de que el concurso terminó! Tu envío se almacenará pero ya no se procesará.} \\
+
+    \end{tabular}
+    \end{center}
+    \endgroup
+
+    \subsection{Aclaraciones}
+
+    \noindent Toda comunicación con los jueces debe realizarse a través de las aclaraciones (clarifications). Éstas se pueden encontrar en la columna derecha de la página de equipo. Tanto las respuestas a las aclaraciones por parte de los jueces como las solicitudes enviadas por el equipo se muestran allí.\\
+
+    \noindent Hay un botón para enviar una nueva solicitud de aclaración a los jueces; se puede asociar una categoría específica del problema o una de las categorías generales a la solicitud. Esta solicitud de aclaración sólo es legible para los jueces. Los jueces pueden responder específicamente a tu equipo o enviar una respuesta a todos si es relevante para todos. Si el caso lo amerita, los jueces pueden ignorar la solicitud a criterio propio.
+
+    \subsection{Restricciones} \label{restricciones}
+
+    \begingroup
+    \setlength{\tabcolsep}{10pt}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{center}
+    \begin{tabular}{c c}
+
+    \textbf{Tiempo de compilación}& \parbox{12cm}{La compilación de tu programa no puede tardar más de 30 segundos. Después de eso, la compilación se interrumpirá y el resultado será un error de compilación. En la práctica, esto nunca debería dar lugar a problemas. Si esto sucede con un programa normal, informa inmediatamente a los jueces.} \\
+
+    \hline 
+
+    \textbf{Tamaño código fuente}& \parbox{12cm}{La cantidad total de código fuente en un solo envío no puede exceder los 256 kilobytes, de lo contrario, tu envío será rechazado.}\\
+
+    \hline 
+
+    \textbf{Memoria}& \parbox{12cm}{Los jueces especificarán la cantidad de memoria que tienes disponible durante la ejecución de tu programa. Ten en cuenta que esto puede variar según el problema. ¡Esta es la cantidad total de memoria (incluido el código del programa, las variables definidas estática y dinámicamente, la pila, la VM de Java, ...)! Si tu programa intenta usar más memoria, es probable que se interrumpa, lo que resultará en un error de ejecución.} \\
+
+    \hline 
+
+    \textbf{Número de procesos}& \parbox{12cm}{No se supone que crees explícitamente múltiples procesos (hilos) en tu programa. De todas formas, esto no tiene sentido porque tu programa tiene exactamente 1 núcleo de procesador a su disposición. Para aumentar la estabilidad del sistema, DOMjudge ejecuta los envíos en un sandbox donde se pueden ejecutar simultáneamente un máximo de 15 procesos (incluidos los procesos que iniciaron tu programa). Las personas que nunca han programado con múltiples procesos (o nunca han oído hablar de "hilos") no tienen que preocuparse: un programa normal se ejecuta en un proceso.} 
+
+    \end{tabular}
+    \end{center}
+    \endgroup
+    <%= render 'exercises' %>
+<%end%>

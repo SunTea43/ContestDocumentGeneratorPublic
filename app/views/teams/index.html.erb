@@ -1,7 +1,7 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Teams</h1>
-
+<hr>
 <div id="teams">
   <% @teams.each do |team| %>
     <%= render team %>
@@ -10,9 +10,13 @@
     </p>
   <% end %>
 </div>
+<hr>
+<div id="documents">
+  <%= link_to 'Generar documentos', documents_teams_path(format: :pdf)  %>
+</div>
 
 <%= link_to "New team", new_team_path %>
-<%=form_tag "/teams/import_teams" do%>
+<%=form_tag "/teams/import_teams", multipart: true do%>
   <%=file_field_tag :file%>
   <%= submit_tag "importar"%>
 <%end%>

@@ -1,7 +1,13 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @team %>
-
+<ul>
+  <% @team.team_members.each do |member|%>
+    <li>
+      <%=member.name%> - <%=member.email%>
+    </li>
+  <%end%>
+</ul>
 <div>
   <%= link_to "Edit this team", edit_team_path(@team) %> |
   <%= link_to "Back to teams", teams_path %>

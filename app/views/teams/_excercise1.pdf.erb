@@ -1,0 +1,49 @@
+\chapter*{Cifrando Mensajes}
+
+\noindent
+El profesor de seguridad informática ha decidido enseñar a sus estudiantes un nuevo método de codificación de mensajes. El método es bastante simple. Cada una de las letras del mensaje original es sustituida por otra letra que se encuentra un número fijo de posiciones más adelante en el alfabeto. Por ejemplo, si utilizamos un desplazamiento de 3, las apariciones de la letra \textbf{'a'} se sustituyen por la \textbf{'d'} ; las apariciones de la \textbf{'b'}  por \textbf{'e'} y así sucesivamente. Si se alcanza el final del alfabeto, el método comienza de nuevo, es decir, con un desplazamiento de 3, la \textbf{'y'} se sustituye por la \textbf{'b'}  y la \textbf{'z'}  se sustituye por la \textbf{'c'} . En este método, también es posible utilizar desplazamientos negativos. Por ejemplo, si utilizamos un desplazamiento de -1, la letra \textbf{'E'}  se convertirá en \textbf{'D'} , mientras que la letra \textbf{'a'}  se convertirá en \textbf{'z'} .
+\\
+
+\noindent
+El profesor les menciona a los estudiantes que este método de cifrado no codifica símbolos que no sean uno de los 26 caracteres del idioma inglés. Por ejemplo, los espacios o los símbolos de puntuación no sufrirán cambio alguno y la letra \textbf{“ñ”} no se considera como parte del alfabeto.
+
+
+\vspace{1cm}
+{\centering
+\begin{tabular}{|p{0.16\textwidth}|p{0.76\textwidth}|}
+    \hline
+    \multirow{2}{*}{\textbf{Entrada}} & 
+    \vspace{-8mm}
+    \hspace{-5mm}
+    \begin{itemize}
+    
+        \item La entrada estará formada por un número indeterminado de casos de prueba
+        \item Cada caso de prueba consiste en una única línea cuyo primer carácter es el código de la letra 'p', seguido de un mensaje codificado con el método descrito antes. Este mensaje utiliza el desplazamiento adecuado para que la letra 'p' se codifique con ese primer carácter.
+        \item Los casos de prueba terminan con un mensaje que, una vez traducido, contiene exactamente la cadena "FIN". Cuando se lee este mensaje codificado el programa debe finalizar  sin generar ninguna otra salida adicional.
+    \end{itemize}
+    \\
+    \hline
+    \multirow{2}{*}{\textbf{Salida}} &
+    \vspace{-4mm}
+    \begin{itemize}
+        \item Para cada caso de prueba, el programa indicará el número de vocales que contiene el mensaje codificado
+        \end{itemize}
+        \\
+   \hline
+\end{tabular}
+}
+\ejemplos{Ejemplos}
+\vspace{0.3cm}
+{\centering
+\begin{tabular}{|p{0.04\textwidth}|p{0.46\textwidth}|p{0.40\textwidth}|}
+    \hline
+    & \textbf{Entrada} & \textbf{Salida} \\
+    \hline
+    1 & \texttt{pEsta cadena esta sin codificar} & 12 \\
+& \texttt{pfin} & 1 \\
+& \texttt{qbfjpvBFJPV} &  10\\
+& \texttt{xXzwoziui-Um} &  4\\
+& \texttt{qGJO} & \\
+\hline
+\end{tabular}
+}
