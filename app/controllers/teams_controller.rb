@@ -58,24 +58,31 @@ class TeamsController < ApplicationController
   end
   def import_teams
     imported_file = params[:file]
-    xlsx_file = Roo::Spreadsheet.open(imported_file)
-    headers = xlsx_file.row(1) # get header row
-    xlsx_file.each_with_index do |row, idx|
-      next if idx == 0 # skip header
-      # create hash from headers and cells
-      team_data = Hash[[headers, row].transpose]
-      team= Team.create(name: team_data["Equipo "])
-      team.username = team.name.split(" ").join("").downcase
-      team.password = team.username+"*#"
-      team.save!
-      e1= team.team_members.create(name: team_data["Estudiante 1"]) 
-      e2= team.team_members.create(name: team_data["Estudiante 2"])
-      e3= team.team_members.create(name: team_data["Estudiante 3"])
-    end 
+    xlsx_file = Roo::Spreadsheet.open(imported_file, extension: :xlsx)
+    xlsx_file.each_with_pagename.each do |name, sheet|
+      headers = sheet.row(1) # get header row
+      sheet.each_with_index do |row, idx|
+        next if idx == 0 # skip header
+        # create hash from headers and cells
+        team_data = Hash[[headers, row].transpose]
+        team= Team.create(name: team_data["Equipo "])
+        team.username = team_data["User"]
+        team.password = team_data["Pass"]
+        team.room = name
+        team.save!
+        e1= team.team_members.create(name: team_data["Estudiante 1"]) 
+        e2= team.team_members.create(name: team_data["Estudiante 2"])
+        e3= team.team_members.create(name: team_data["Estudiante 3"])
+      end 
+    end
     redirect_to teams_path, notice: "Importados con éxito"
   end
   def documents
-    @teams = Team.all
+    @teams = if params[:room]
+      Team.where(room: params[:room])
+    else
+      Team.all
+    end 
     respond_to do |format|
       format.pdf
     end
