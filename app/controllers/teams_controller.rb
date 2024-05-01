@@ -70,10 +70,10 @@ class TeamsController < ApplicationController
         team.password = team_data["Pass"]
         team.room = name
         team.save!
-        e1= team.team_members.create(name: team_data["Estudiante 1"]) 
-        e2= team.team_members.create(name: team_data["Estudiante 2"])
-        e3= team.team_members.create(name: team_data["Estudiante 3"])
-      end 
+        team.team_members.create(name: team_data["Estudiante 1"])
+        team.team_members.create(name: team_data["Estudiante 2"])
+        team.team_members.create(name: team_data["Estudiante 3"])
+      end
     end
     redirect_to teams_path, notice: "Importados con éxito"
   end
@@ -82,7 +82,7 @@ class TeamsController < ApplicationController
       Team.where(room: params[:room])
     else
       Team.all
-    end 
+    end
     respond_to do |format|
       format.pdf
     end

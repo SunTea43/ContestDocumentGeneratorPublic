@@ -1,4 +1,4 @@
-<% @latex_config={:parse_runs => 2} %>
+<% @latex_config={parse_runs: 2} %>
 \documentclass{usa_syllabus}
 \usepackage{natbib}
 \usepackage{url}
