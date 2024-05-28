@@ -13,11 +13,9 @@
 <hr>
 <div id="documents">
   <%= link_to 'Generar documentos', documents_teams_path(format: :pdf)  %>
-
-  <%= link_to 'Generar documentos B402', documents_teams_path(room: "B402", format: :pdf)  %>
-  <%= link_to 'Generar documentos F403', documents_teams_path(room: "F403", format: :pdf)  %>
-  <%= link_to 'Generar documentos F404', documents_teams_path(room: "F404", format: :pdf)  %>
-  <%= link_to 'Generar documentos B301', documents_teams_path(room: "B301", format: :pdf)  %>
+  <% Room.all.each do |room| %>
+    <%= link_to "Generar documentos #{room.name}", documents_teams_path(room: room.name, format: :pdf)  %>
+  <% end%>
 </div>
 
 <%= link_to "New team", new_team_path %>

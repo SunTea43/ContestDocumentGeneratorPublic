@@ -3,6 +3,11 @@
 \usepackage{natbib}
 \usepackage{url}
 \usepackage[defaultbib,breakcites]{bibtopic}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{listings}
+\usepackage{lmodern}
 \begin{document}
 <%= yield %>
 \end{document}

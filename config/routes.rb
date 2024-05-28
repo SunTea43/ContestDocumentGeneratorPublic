@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :rooms
   get 'home/index'
   resources :team_members
   resources :teams do
