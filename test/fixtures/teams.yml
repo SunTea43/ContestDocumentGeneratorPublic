@@ -12,7 +12,9 @@
 #
 
 one:
-  name: MyString
+  name: Team 1
+  room: Room 1
 
 two:
-  name: MyString
+  name: Team 2
+  room: Room 2

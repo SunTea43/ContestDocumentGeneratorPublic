@@ -45,4 +45,17 @@ class TeamsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to teams_url
   end
+
+  test "should get all documents" do
+    get documents_teams_url(format: :pdf)
+
+    assert_response :success
+  end
+
+  test "should get all documents from a room" do
+    room = rooms(:one)
+    get documents_teams_url(room: room.name, format: :pdf)
+
+    assert_response :success
+  end
 end
