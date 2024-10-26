@@ -76,3 +76,5 @@ gem 'rails-latex', :git => 'git@github.com:amagical-net/rails-latex.git', branch
 
 # Roo Gem
 gem 'roo', '~> 2.4'
+
+gem "annotate", "~> 3.2"
