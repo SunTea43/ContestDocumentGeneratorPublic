@@ -1,0 +1,67 @@
+\chapter*{N - Problema de las N Reinas}
+\noindent
+% Nivel: Difícil\\
+Adaptado de $leetcode.com$ por Santiago Pérez G.\\
+% https://leetcode.com/problems/n-queens-ii/description/
+
+
+
+\noindent
+El problema de las \textit{n-reinas} consiste en colocar $n$ reinas en un tablero de ajedrez de $n\times n$ de tal manera que ninguna reina amenace a otra. A continuación, podemos observar un ejemplo.
+
+\begin{figure}[ht]
+     \centering
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=0.4\textwidth]{images/n-queens.png}
+         \caption{Una solución al problema de las n-reinas cuando $n=4$. Para $n=4$ existen dos soluciones}
+         \label{fig:solution-n-queens}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=0.4\textwidth]{images/n-queens-attacked.png}
+         \caption{Una solución no válida al problema de las n-reinas. Las damas no pueden estar en la misma fila, columna o diagonal}
+         \label{fig:solution-not-valid-n-queens}
+     \end{subfigure}
+     \hfill
+\end{figure}
+
+\noindent
+%Tenga en cuenta que este problema se ha convertido en un reto sumamente difícil en el mundo, es por ello que, en el mundo, se tratan de aplicar un gran número de estrategias para resolverlo, pero en este caso, será simplifica el problema dada la gran cantidad de soluciones que puede haber cuando $n$ es muy grande. Es por ello que para este problema usted solamente tendrá en una restricción para el número $n$ ya que hasta el momento, no existe una solución concreta para determinar cuántas soluciones se encontrarán de este problema cuando $n$ sea cualquier número entero. \\ 
+\noindent
+El problema de las \textit{n-reinas} es un problema clásico en el mundo de la computación, y se han desarrollado numerosas estrategias para abordarlo. El problema radica en que a medida que el tamaño del tablero de ajedrez aumenta, es decir, cuando $n$ se vuelve muy grande, el espacio de búsqueda crece exponencialmente, lo que genera desafíos significativos desde el punto de vista computacional. Para simplificar el problema, en este caso se optará por limitar el valor de $n$ a rangos \emph{manejables}, es decir, valores que permitan un procesamiento eficiente en términos de los recursos computacionales disponibles. Sin embargo, el objetivo fundamental sigue siendo el mismo: determinar cuántas configuraciones válidas existen para cualquier valor arbitrario de $n$, lo que implica encontrar la disposición de las reinas en el tablero de ajedrez de $n \times n$ de tal manera que ninguna dama se amenace mutuamente.
+
+
+\vspace{1cm}
+{\centering
+\begin{tabular}{|p{0.16\textwidth}|p{0.76\textwidth}|}
+    \hline
+    \multirow{2}{*}{\textbf{Entrada}} & 
+    \vspace{-8mm}
+    \hspace{-5mm}
+    \begin{itemize}
+    
+        \item La entrada estará formada por un número $n \in \mathbb{N}  $.
+    \end{itemize}
+    \\
+    \hline
+    \multirow{2}{*}{\textbf{Salida}} &
+    \vspace{-4mm}
+    \begin{itemize}
+         \item Será el número de soluciones que hay del problema de las \textit{n-reinas} dado un tablero de tamaño $n\times n$ 
+    \end{itemize}
+        \\
+   \hline
+\end{tabular}
+}
+\ejemplos{Ejemplos}
+\vspace{0.3cm}
+{\centering
+\begin{tabular}{|p{0.04\textwidth}|p{0.46\textwidth}|p{0.40\textwidth}|}
+    \hline
+    & \textbf{Entrada} & \textbf{Salida} \\ \hline
+    1 & 4        & 2\\ \hline
+    2 & 1        & 1 \\ \hline
+\end{tabular}
+}

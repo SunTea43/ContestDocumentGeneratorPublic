@@ -1,9 +1,11 @@
 <%@teams.each do |team|%>
+    \ClearWallPaper 
     \maketitle
+    \LRCornerWallPaper{0.1}{plantilla/LogoSimboloUSA-V-G-20.pdf}
     \chapter*{Instrucciones}
     \begin{tabular}{|p{0.2\textwidth}|p{0.7\textwidth}|}
         \hline
-        Pagina web & \url{https://www.cetulu.top/domjudge}  \\
+        Pagina web & \url{https://usaton.tech:12345}  \\
         \hline
         Salón Asignado & <%= lesc(team.room)%> \\
         \hline
@@ -118,4 +120,5 @@
     \end{center}
     \endgroup
     <%= render 'exercises' %>
+    \cleardoublepage  
 <%end%>

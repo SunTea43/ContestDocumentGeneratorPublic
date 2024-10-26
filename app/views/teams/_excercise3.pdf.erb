@@ -1,0 +1,80 @@
+\chapter*{H - Hacker}
+
+\noindent Adaptado de \textit{codeforce.com} Andres Ducuara\\
+
+\noindent 
+Imagina que eres un hábil hacker que ha logrado infiltrarse en una red de servidores pertenecientes a una empresa de videojuegos. Tu objetivo es descifrar un código secreto que les permitirá a los desarrolladores crear un nuevo mapa para su próximo juego de batalla táctica. El mapa está representado por una cuadrícula de $r$ filas y $c$ columnas, donde la casilla de la fila $i$ y la columna $j$ contiene un número entero $a_{i,j}$. Inicialmente, todas las casillas están en cero. Sin embargo, los desarrolladores han implementado una operación especial que te permitirá alterar los valores de la cuadrícula.
+\noindent La operación consiste en elegir una fila $i$ y una columna $j$, y luego aplicar la operación \textbf{xor} a todos los valores que se encuentren en la misma fila o columna que la casilla $(i,j)$. En otras palabras, para todas las casillas $a_{x,y}$ donde $x=i$ o $y=j$ (o ambas), reemplazarás $a_{x,y}$ con $a_{x,y}$ \textbf{xor} 1. Recuerda que valor de salida de una compuerta \textbf{xor} es el resultado de la suma binaria de sus entradas, es decir que será 1 cuando sus entradas sean distintas y será 0 cuando sus entradas sean iguales.
+
+\noindent Tu tarea es formar una cuadrícula $b$ realizando esta operación un número finito de veces. Desafortunadamente, algunos elementos de la cuadrícula $b$ faltan y han sido reemplazados por el símbolo '?'. Si definimos $k$ como el número de veces que el aparece el caracter '?' entre las $2^k$ formas de remplazar cada '?' por 0 o 1 debes contar el número de cuadriculas posibles que pueden formarse reemplazando cada '?' con un '0' o un '1', de tal manera que la cuadrícula resultante pueda formarse aplicando la operación XOR un número finito de veces. Siempre se comienza de una cuadrícula llena de ceros. Teniendo en cuenta que el número de cuadriculas posibles puede ser muy grande, debes reportar el resultado módulo $998244353$.
+\\
+
+\noindent ¡Demuestra tus habilidades de hacker y descifra el código secreto para ayudar a los desarrolladores a crear un nuevo y emocionante mapa de batalla!
+
+
+{\centering
+\begin{tabular}{|p{0.16\textwidth}|p{0.76\textwidth}|}
+
+    \hline
+    \multirow{2}{*}{\textbf{Entrada}} & 
+    \vspace{-8mm}
+    \hspace{-5mm}
+    \begin{itemize}
+
+        \item La entrada estandar, La primera línea contiene dos enteros r y c ($1 \leq r,c \leq 2000$): el número de filas y columnas de la cuadrícula, respectivamente.
+La i-ésima de las siguientes r líneas contiene c caracteres $b_{i,1}$,$b_{i,2}$,...,$b_{i,c}$ ($b_{i,j}\in\{0,1,?\}$).
+    \end{itemize}
+    \\
+    \hline
+    \multirow{2}{*}{\textbf{Salida}} &
+    \vspace{-4mm}
+    \begin{itemize}
+        \item Imprime un único número entero que representa el número de formas de rellenar la cuadrícula $b$ módulo 998244353.
+        \end{itemize}
+        \\
+   \hline
+\end{tabular}
+}
+\vspace{1cm}
+
+\ejemplos{Ejemplos}
+\vspace{0.3cm}
+{
+\centering
+\begin{tabular}{|p{0.04\textwidth}|p{0.46\textwidth}|p{0.40\textwidth}|}
+\hline
+\textbf{} & \textbf{Entrada} & \textbf{Salida} \\
+\hline
+1 & \begin{lstlisting}
+3 3
+?10
+1??
+010
+\end{lstlisting} & \begin{lstlisting}
+1
+\end{lstlisting} \\
+\hline
+2 & \begin{lstlisting}
+6 9
+1101011?0
+001101?00
+101000110
+001011010
+0101?01??
+00?1000?0
+\end{lstlisting} & \begin{lstlisting}
+8
+\end{lstlisting} \\
+\hline
+3 & \begin{lstlisting}
+4 5
+01?10
+?0?01
+1?1?0
+??011
+\end{lstlisting} & \begin{lstlisting}
+16
+\end{lstlisting} \\
+\hline
+\end{tabular}
+}

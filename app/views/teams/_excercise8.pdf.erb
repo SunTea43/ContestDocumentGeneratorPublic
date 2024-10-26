@@ -1,0 +1,45 @@
+\chapter*{E - Entero invertido}
+\noindent
+Adaptado de $leetcode.com$ por Santiago Pérez G.\\
+% https://leetcode.com/problems/reverse-integer/description/
+
+\noindent
+En su clase de introducción a algoritmos, el profesor asignó una tarea crucial: un problema que involucra una bomba a punto de detonar. El estudiante recibe un número entero $x$  que representa los segundos restantes antes de que la bomba explote. El desafío es invertir los dígitos de este número en un tiempo limitado para desactivar la bomba. Sin embargo, hay una restricción adicional: se asume que el resultado debe caber en 32 bits. Por lo tanto, si invertir $x$ provoca que el valor salga del rango de enteros con signo de 32 bits [$-2^{31}$, $2^{31}$ - 1], el resultado debe ser 0 para evitar una catástrofe.
+
+\vspace{1cm}
+{\centering
+\begin{tabular}{|p{0.16\textwidth}|p{0.76\textwidth}|}
+    \hline
+    \multirow{2}{*}{\textbf{Entrada}} & 
+    \vspace{-8mm}
+    \hspace{-5mm}
+    \begin{itemize}
+    
+        \item La entrada estará formada por un número $x \in \mathbb{Z}$
+    \end{itemize}
+    \\
+    \hline
+    \multirow{2}{*}{\textbf{Salida}} &
+    \vspace{-4mm}
+    \begin{itemize}
+        \item Para cada caso de prueba, se debe imprimir  un número entero $y$ que representa al número invertido. Tenga en cuenta que $-2^{31}<y<2^{31}-1$
+        \end{itemize}
+        \\
+   \hline
+\end{tabular}
+}
+\ejemplos{Ejemplos}
+\vspace{0.3cm}
+{\centering
+\begin{tabular}{|p{0.04\textwidth}|p{0.46\textwidth}|p{0.40\textwidth}|}
+    \hline
+    & \textbf{Entrada} & \textbf{Salida} \\
+    \hline
+    1 & 123 & 321 \\
+\hline
+    2 & -123 & -321 \\
+\hline
+    3 & 120 & 21 \\
+\hline
+\end{tabular}
+}

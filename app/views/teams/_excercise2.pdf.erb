@@ -1,0 +1,78 @@
+\chapter*{M - Ordenando Mercancía}
+
+\noindent
+Adaptado de \textit{codechef.com}  por Jes\'us Chaves A.\\
+
+
+%Un transportador de carga necesita ordenar su mercancía, la cual consiste en cajas numeradas según su importancia para ser cargadas siguiendo una secuencia \textbf{\textit{N}} de enteros positivos. Sin embargo, la mercancía no está organizada de manera ascendente inicialmente. Se requiere tu ayuda para llevar a cabo esta tarea. En cualquier momento, puedes realizar una de las siguientes operaciones:
+\noindent
+Una empresa de carga en la ciudad de Bogotá necesita ordenar su mercancía antes de transportarla a sus lugares de destino. La mercancía consiste en un conjunto de $N$ cajas numeradas según su nivel de importancia. Para poder cargar la mercancía en los camiones de la empresa,  las cajas  deben ser organizadas como una secuencia de N enteros positivos organizados de forma ascendente. Lamentablemente, las cajas están desordenadas y solo es posible modificar su orden realizando alguna de las siguientes operaciones:
+
+\begin{itemize}
+    %\item Cuando hay una secuencia de longitud mayor que 1, se debe \textbf{dividir} en dos secuencias no vacías en algún punto. El costo asociado a esta operación se calcula como el mínimo entre los tamaños de las dos partes divididas.
+
+
+      \item \textbf{OPERACIÓN 1:} Para una secuencia de cajas de longitud mayor a 1, es posible seleccionar un punto para dividirla en dos nuevas secuencias no vacías. El costo asociado a esta operación se define como el mínimo entre los tamaños de las dos secuencias obtenidas.
+      
+      \item \textbf{OPERACIÓN 2:} Cuando existen múltiples secuencias de cajas, posiblemente como resultado de una o más operaciones de división realizadas anteriormente, es posible seleccionar una secuencia con una longitud mayor que 1 y dividirla en dos secuencias no vacías. El costo asociado a esta operación es igual al mínimo los tamaños de las dos secuencias obtenidas.
+      
+      \item \textbf{OPERACIÓN 3:} Cuando existen múltiples secuencias de cajas, 
+      posiblemente como resultado de una o más operaciones de división realizadas anteriormente,  es posible seleccionar dos de ellas y concatenarlas en cualquier orden. El costo asociado a esta operación es la longitud total de la secuencia resultante, es decir, la suma de las longitudes de ambas partes.
+    
+    %\item Cuando existen múltiples secuencias posiblemente como resultado de una o más operaciones de división previas, puedes seleccionar una secuencia con una longitud mayor que 1 y \textbf{dividirla} en dos secuencias no vacías en cualquier momento. El costo asociado a esta operación es igual al mínimo entre los tamaños de las dos partes resultantes.
+
+    %\item Cuando existen múltiples secuencias, posiblemente como resultado de una o más operaciones de división previas, tienes la opción de seleccionar dos de ellas y \textbf{concatenarlas} en cualquier orden. El costo asociado a esta operación es la longitud total de la secuencia resultante, es decir, la suma de las longitudes de ambas partes.
+
+\end{itemize} 
+
+\noindent
+Debido a que existen numerosas formas de ordenar la mercancía siguiendo estas operaciones, nuestro objetivo es ayudar a la empresa a determinar el costo mínimo de todas las operaciones necesarias para lograr un ordenamiento óptimo de las cajas en orden ascendente.\\
+
+%\begin{center}
+%    \includegraphics[width=5cm]{preguntas/box.png}
+%\end{center}
+
+\vspace{1cm}
+{\centering
+\begin{tabular}{|p{0.16\textwidth}|p{0.76\textwidth}|}
+    \hline
+    \multirow{2}{*}{\textbf{Entrada}} & 
+    \vspace{-8mm}
+    \hspace{-5mm}
+    \begin{itemize}
+    
+        \item La primera línea contiene el número de casos de prueba \textbf{\textit{T}}.
+        \item La primera línea de cada caso de prueba contiene un único entero \textbf{\textit{N}}, que representa la cantidad de cajas a ordenar.
+        \item La segunda línea de cada caso de prueba contiene \textbf{\textit{N}} enteros separados por espacios
+    \end{itemize}
+    \\
+    \hline
+    \multirow{2}{*}{\textbf{Salida}} &
+    \vspace{-4mm}
+    \begin{itemize}
+        \item Para cada caso de prueba, se debe generar en una sola línea representada por un entero que equivale al costo mínimo de las operaciones necesarias para ordenar las cajas a partir de las operaciones establecidas.
+        \end{itemize}
+        \\
+   \hline
+\end{tabular}
+}
+\ejemplos{Ejemplos}
+\vspace{0.3cm}
+{\centering
+\begin{tabular}{|p{0.04\textwidth}|p{0.46\textwidth}|p{0.40\textwidth}|}
+    \hline
+    & \textbf{Entrada} & \textbf{Salida} \\
+    \hline
+      & 2 & 11 \\
+      & 5 & 0 \\
+    \centering 1 
+      & 1 2 4 5 3 & \\
+      & 5 & \\
+      & 1 2 3 4 5 & \\
+% \hline
+%     2 &  &  \\
+% \hline
+%     3 &  &  \\
+\hline
+\end{tabular}
+}

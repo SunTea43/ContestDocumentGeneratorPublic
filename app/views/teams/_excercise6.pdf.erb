@@ -1,0 +1,94 @@
+\chapter*{G - Acceso anticipado}
+
+\noindent
+Adaptado de \textit{codeforce.com} Andres Ducuara\\[0.1cm]
+
+\noindent Westcol, un joven apasionado por los videojuegos, recibe como regalo un polígono especial durante el emocionante evento de lanzamiento de un nuevo juego de estrategia. Este hexágono posee características únicas que capturan de inmediato su atención. Fascinado por sus propiedades, Westcol decide personalizarlo dentro del juego.
+\\
+
+\noindent Aprovechando las herramientas de edición proporcionadas por el juego, Westcol traza varias líneas paralelas a los lados del polígono. Estas líneas dividen el polígono en una intrincada red de triángulos equiláteros, cada uno con lados de exactamente 1 centímetro de longitud. Inmerso en su creatividad, Westcol se embarca en la tarea de determinar cuántos de estos triángulos ha creado. Sin embargo, su entusiasmo lo absorbe tanto en la tarea que pierde rápidamente la cuenta.
+\\
+
+\noindent Ahora, para obtener la clave de acceso anticipado al juego de estrategia, es imperativo contar con precisión la cantidad de triángulos creados. \textbf{¡Es hora de ayudar a Westcol a alcanzar su objetivo y desbloquear esta emocionante nueva experiencia de juego!}
+
+\vspace{1cm}
+{\centering
+\begin{tabular}{|p{0.16\textwidth}|p{0.76\textwidth}|}
+    \hline
+    \multirow{2}{*}{\textbf{Tiempo limite}} & 
+    \vspace{-8mm}
+    \hspace{-5mm}
+    \begin{itemize}
+        \item 2 segundo
+    \end{itemize}
+    \\
+        \hline
+    \multirow{2}{*}{\textbf{Memoria limite}} & 
+    \vspace{-8mm}
+    \hspace{-5mm}
+    \begin{itemize}
+    
+        \item 256 megabytes
+    \end{itemize}
+    \\
+    \hline
+    \multirow{2}{*}{\textbf{Entrada}} & 
+    \vspace{-8mm}
+    \hspace{-5mm}
+    \begin{itemize}
+
+        \item La primera y única línea de entrada contiene 6 enteros separados por espacios \( a_1, a_2, a_3, a_4, a_5 \) y \( a_6 \) (\(1 \leq a_i \leq 1000\))
+        \item las longitudes de los lados de los hexágonos en centímetros en orden horario. Se garantiza que existe un hexágono con las propiedades indicadas y exactamente tales lados.
+
+    \end{itemize}
+    \\
+    \hline
+    \multirow{2}{*}{\textbf{Salida}} &
+    \vspace{-4mm}
+    \begin{itemize}
+        \item Imprime un único entero 
+        \item el número de triángulos con lados de 1 centímetro en los que se divide el hexágono.
+
+        \end{itemize}
+        \\
+   \hline
+\end{tabular}
+}
+\vspace{1cm}
+
+\ejemplos{Ejemplos}
+\vspace{0.3cm}
+{
+\centering
+\begin{tabular}{|p{0.04\textwidth}|p{0.46\textwidth}|p{0.40\textwidth}|}
+\hline
+\textbf{} & \textbf{Entrada} & \textbf{Salida} \\
+\hline
+1 & \begin{lstlisting}
+1 1 1 1 1 1
+\end{lstlisting} & \begin{lstlisting}
+6
+\end{lstlisting} \\
+\hline
+2 & \begin{lstlisting}
+1 2 1 2 1 2
+\end{lstlisting} & \begin{lstlisting}
+13
+\end{lstlisting} \\
+\hline
+\end{tabular}
+}
+
+\vspace{1.5cm}
+
+Así es como se ve el polígono de Westcol en el primer ejemplo:
+
+\begin{center}
+    \includegraphics[width=5cm]{images/AcessoSample1.png}
+\end{center}
+
+Y así es como se ve en el segundo ejemplo:
+
+\begin{center}
+    \includegraphics[width=5cm]{images/AcessoSample2.png}
+\end{center}

@@ -1,0 +1,67 @@
+\chapter*{K - El Artefacto del Rey Arturo}
+
+\noindent
+Adaptado de \textit{codechef.com},  por Diego Bermudez.\\[0.1cm]
+
+\noindent
+En las profundidades de la noche, después de una gloriosa victoria en batalla, el valeroso caballero Sir Galahad se aventuraba por las calles silenciosas del pueblo, donde las sombras danzaban entre las luces titilantes de una taberna cercana. En un rincón apartado, entre el bullicio de los aldeanos que celebraban con cánticos y risas, Sir Galahad descubrió un misterioso artefacto que parecía emanar un aura de antigüedad y poder. Sin entender su propósito, decidió llevarlo ante su rey, el noble Arturo, para que fuera examinado por los sabios del reino. Los sabios de Camelot explicaron que para operar el artefacto se debía ingresar un número de tres dígitos, el cual es transformado de la siguiente manera: primero, se multiplicaba por 13, luego por 11 y finalmente por 7. Luego, emitía todos los números distintos de tres dígitos posibles a partir de los dígitos del número resultante, donde cada dígito solo podía utilizarse una vez.
+\\
+
+\noindent
+Según se decía, este artefacto había sido dejado atrás por un enigmático viajero del tiempo que había visitado la corte del Rey Arturo en épocas antiguas. Ahora, Sir Zaphod, compañero de Sir Galahad y conocido por su espíritu curioso, deseaba experimentar con él de la siguiente manera: tomaba un número positivo de tres dígitos K y lo introducía en el artefacto para su procesamiento. Luego, recolectaba los números resultantes y los sometía nuevamente al artefacto, repitiendo este proceso N veces.\\
+
+\noindent
+Para poner a prueba la astucia de Sir Galahad, Sir Zaphod lo desafiaba a encontrar la cantidad de números distintos de tres dígitos que el artefacto emitía durante los N pasos. Nuestra tarea es ayudr a Sir Galahad a realizar el conteo de los números emitidos por el artefacto.\\
+
+
+
+
+\begin{tabular}{|p{0.16\textwidth}|p{0.76\textwidth}|}
+    \hline
+    \multirow{3}{*}{\textbf{Entrada}} & 
+    \vspace{-8mm}
+    \hspace{-5mm}
+    \begin{itemize}
+    
+    \item La primera línea contiene el número de casos de   prueba \textbf{\textit{T}}.
+    \item Luego seguirán los casos de prueba.
+        Cada caso de prueba contiene una sola línea de entrada, dos enteros
+K,
+N.
+
+    \end{itemize}
+    \\
+    \hline
+    \multirow{3}{*}{\textbf{Salida}} &
+    \vspace{-4mm}
+    \begin{itemize}
+        \item Para cada caso de prueba, imprime un solo entero que denote el número de números distintos de tres dígitos que el dispositivo emite durante los N pasos.
+        \end{itemize}
+        \\
+   \hline
+
+   \hline
+    \multirow{3}{*}{\textbf{Restricciones}} &
+    \vspace{-4mm}
+    \begin{itemize}
+        \item $1 \leq T \leq 10$
+        \item $5 \leq N \leq 10^{9}$
+        \item Ninguno de los digitos de K será 0
+        \end{itemize}
+        \\
+   \hline
+\end{tabular}
+
+\ejemplos{Ejemplos}
+\vspace{0.3cm}
+{\centering
+\begin{tabular}{|p{0.04\textwidth}|p{0.46\textwidth}|p{0.40\textwidth}|}
+    \hline
+    & \textbf{Entrada} & \textbf{Salida} \\
+    \hline
+      & 1 & 27  \\
+      & 123 5 &\\
+\hline
+\end{tabular}
+} 
+    

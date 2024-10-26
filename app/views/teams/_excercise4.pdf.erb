@@ -1,0 +1,78 @@
+\chapter*{C - Canguros de Circo}
+
+\noindent
+Adaptado de $hackerrank.com$ por Camilo Rodríguez.
+\\
+
+\noindent Usted es el coreógrafo de un circo que entrena animales para el espectáculo. Para uno de los actos, usted cuenta con 2 canguros sobre una línea recta listos a saltar hacia la derecha. El acto funciona así:
+
+\begin{itemize}
+
+\item El primer canguro comienza en la posición $x_1$ y salta con una velocidad de $v_1$ metros por cada salto
+
+\item El segundo canguro comienza en la posición $x_2$ y salta con una velocidad de $v_2$ metros por cada salto
+
+\end{itemize}
+
+\noindent
+Se espera que los canguros se encuentren en algún punto después de un número de saltos. Su tarea es construir un programa que ayude a determinar si dada la configuración $x_1, v_1, x_2, v_2$, los canguros se van a encontrar o no. Si esto es posible debe retornar \textbf{SI}, en caso contrario \textbf{NO}. Por ejemplo: Si el canguro 1, comienza en $x_1=2$ y tiene una velocidad de $v_1=1$ (1 metro por cada salto) y el canguro 2 comienza en $x_2=1$ y tiene una velocidad de $v_2=2$ (2 metros por cada salto), el programa debe responder \textbf{SI}, ya que los dos canguros se encontraran a los 3 metros.
+
+\vspace{1cm}
+{\centering
+\begin{tabular}{|p{0.16\textwidth}|p{0.76\textwidth}|}
+
+    \hline
+    \multirow{2}{*}{\textbf{Entrada}} & 
+    \vspace{-8mm}
+    \hspace{-5mm}
+    \begin{itemize}
+
+        \item La primera y única línea de entrada contiene 4 enteros separados por espacios: 
+        
+        $x_1$ $v_1$ $x_2$ $v_2$
+
+    \end{itemize}
+    \\
+    \hline
+    \multirow{2}{*}{\textbf{Salida}} &
+    \vspace{-4mm}
+    \begin{itemize}
+        \item Imprime SI o NO
+
+        \end{itemize}
+        \\
+   \hline
+\end{tabular}
+}
+\vspace{1cm}
+
+\ejemplos{Ejemplos}
+\vspace{0.3cm}
+{
+\centering
+\begin{tabular}{|p{0.04\textwidth}|p{0.46\textwidth}|p{0.40\textwidth}|}
+\hline
+\textbf{} & \textbf{Entrada} & \textbf{Salida} \\
+\hline
+1 & \begin{lstlisting}
+2 1 1 2
+\end{lstlisting} & \begin{lstlisting}
+SI
+\end{lstlisting} \\
+\hline
+2 & \begin{lstlisting}
+0 3 4 2
+\end{lstlisting} & \begin{lstlisting}
+SI
+\end{lstlisting} \\
+\hline
+3 & \begin{lstlisting}
+0 2 5 3
+\end{lstlisting} & \begin{lstlisting}
+NO
+\end{lstlisting} \\
+\hline
+\end{tabular}
+}
+
+\vspace{1.5cm}

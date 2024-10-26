@@ -1,0 +1,73 @@
+\chapter*{F - Nota Final}
+\noindent
+Adaptado de $hackerrank.com$ por Andrés C. López.\\
+% https://www.hackerrank.com/challenges/grading/problem?isFullScreen=true
+
+\noindent
+El profesor Carlos Xavier es conocido por su generosidad al momento de calcular las notas finales en su materia \emph{Lógica de Programación X}. Él profesor Xavier sigue un método de redondeo que se ajusta a los siguientes criterios:
+
+\begin{itemize}
+    \item Las notas de los estudiantes se encuentran en un rango de $0$ a $100$.
+    \item Si la nota es inferior a $40$, significa que el estudiante reprobó.
+    \item Para redondear una nota, se verifica si la diferencia entre la nota actual y su siguiente múltiplo de 5 es menor que 3. En ese caso, se redondea al siguiente múltiplo de 5.
+    \item Sin embargo, si el valor de la nota actual es inferior a $38$, no se realiza ningún redondeo, ya que el resultado seguiría siendo menor a $40$.
+\end{itemize}
+
+\noindent Su misión es proponer un código que automatice este proceso para una lista de notas  de tamaño $N$ correspondientes a los alumnos de del curso.
+
+\vspace{1cm}
+{\centering
+\begin{tabular}{|p{0.16\textwidth}|p{0.76\textwidth}|}
+    \hline
+    \multirow{2}{*}{\textbf{Entrada}} & 
+    \vspace{-8mm}
+    \hspace{-5mm}
+    \begin{itemize}
+        \item La primera línea es un entero positivo $n$ equivalente al número de estudiantes, dónde $1 \leq n \leq 100$.
+        \item Cada línea $i$ de las siguientes $n$ líneas son enteros positivos. dónde $ 0 \leq notas[i] \leq 100$.
+    \end{itemize}
+    \\
+    \hline
+    \multirow{2}{*}{\textbf{Salida}} &
+    \vspace{-4mm}
+    \begin{itemize}
+        \item Retornar únicamente la lista de enteros positivos $notas[i]$ después de aplicarles el redondeo.
+        \end{itemize}
+        \\
+   \hline
+\end{tabular}
+}
+\ejemplos{Ejemplos}
+\vspace{0.3cm}
+{\centering
+\begin{tabular}{|p{0.04\textwidth}|p{0.46\textwidth}|p{0.40\textwidth}|}
+    \hline
+    & \textbf{Entrada} & \textbf{Salida} \\
+    \hline
+      & 4 & 75  \\
+      & 73 & 67 \\
+     \centering 1 
+      & 67 &  40\\
+      & 38 &  33\\
+      & 33 & \\      
+    \hline
+      & 3 & 85  \\
+      & 84 & 29 \\
+     \centering 2 
+      & 29 & 57 \\
+      & 57 &  \\
+    \hline
+     &  9 & 80 \\
+     & 78 & 52 \\
+     & 52 & 14 \\
+     & 14 & 90 \\
+    \centering 3
+     & 89 & 22 \\
+     & 22 & 15 \\
+     & 15 & 45 \\
+     & 43 & 35 \\
+     & 35 & 100 \\
+     & 98 & \\
+    \hline
+\end{tabular}
+} 

@@ -1,0 +1,70 @@
+\chapter*{R - Restaurante}
+
+\noindent
+Adaptado de $hackerrank.com$ por Camilo Rodríguez.
+\\
+
+\noindent Ana y Pepe han decidido dividir la cuenta después de cenar en un restaurante. Acordaron que cada uno pagaría únicamente por los platos que ha consumido. Pepe recibe la cuenta y calcula la parte que Ana debe pagar. Ana responderá \emph{Bon Appétit} si el cálculo es correcto. En caso de que el cálculo sea errado, Ana le indicará a Pepe la diferencia entre el cálculo que él realizó y el valor real como un número entero.
+\\
+
+\noindent El restaurante presenta la cuenta como un arreglo de números enteros donde cada elemento representa el precio de un plato consumido. Por ejemplo, supongamos que la cuenta tiene los siguientes precios: [2, 4, 6] y Ana no comió el ítem número 2 (suponiendo que los índices del arreglo comienzan en cero). Si Pepe calcula correctamente la cuenta, Ana pagará $(2+4)/2=3$. Si se equivoca e incluye el ítem número 2, la cuenta dará como resultado $(2+4+6)/2=6$. Por lo tanto, Ana responderá que la diferencia es de 3.
+
+
+\vspace{1cm}
+{\centering
+\begin{tabular}{|p{0.16\textwidth}|p{0.76\textwidth}|}
+
+    \hline
+    \multirow{2}{*}{\textbf{Entrada}} & 
+    \vspace{-8mm}
+    \hspace{-5mm}
+    \begin{itemize}
+
+        \item La primera línea tiene 2 números separados por espacios $n$ y $k$, que corresponden al número de platos consumidos y el valor $k$ el índice del plato que Ana no consumió. 
+        \item La segunda línea presenta los costos de los platos consumidos separados por espacios.
+        \item La tercera línea contiene un entero $b$ que indica el cálculo de la cuenta que relaliza Pepe.
+    \end{itemize}
+    \\
+    \hline
+    \multirow{2}{*}{\textbf{Salida}} &
+    \vspace{-4mm}
+    \begin{itemize}
+        \item 
+        Bon Appetit o la diferencia entre el valor calculado por Pepe y el valor real de la cuenta como un valor entero.
+        \end{itemize}
+        \\
+   \hline
+\end{tabular}
+}
+\vspace{1cm}
+
+\ejemplos{Ejemplos}
+\vspace{0.3cm}
+{
+\centering
+\begin{tabular}{|p{0.04\textwidth}|p{0.46\textwidth}|p{0.40\textwidth}|}
+\hline
+\textbf{} & \textbf{Entrada} & \textbf{Salida} \\
+\hline
+1 & \begin{lstlisting}
+4 1 
+3 10 2 9 
+12
+\end{lstlisting} & \begin{lstlisting}
+5
+\end{lstlisting} \\
+\hline
+2 & \begin{lstlisting}
+4 1 
+3 10 2 9 
+7
+\end{lstlisting} & \begin{lstlisting}
+Bon Appetit
+\end{lstlisting} \\
+\hline
+
+\hline
+\end{tabular}
+}
+
+\vspace{1.5cm}

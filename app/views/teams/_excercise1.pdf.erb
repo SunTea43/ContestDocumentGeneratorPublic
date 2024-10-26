@@ -1,12 +1,40 @@
-\chapter*{Cifrando Mensajes}
+\chapter*{A - ¡Alcanza el 24!}
 
 \noindent
-El profesor de seguridad informática ha decidido enseñar a sus estudiantes un nuevo método de codificación de mensajes. El método es bastante simple. Cada una de las letras del mensaje original es sustituida por otra letra que se encuentra un número fijo de posiciones más adelante en el alfabeto. Por ejemplo, si utilizamos un desplazamiento de 3, las apariciones de la letra \textbf{'a'} se sustituyen por la \textbf{'d'} ; las apariciones de la \textbf{'b'}  por \textbf{'e'} y así sucesivamente. Si se alcanza el final del alfabeto, el método comienza de nuevo, es decir, con un desplazamiento de 3, la \textbf{'y'} se sustituye por la \textbf{'b'}  y la \textbf{'z'}  se sustituye por la \textbf{'c'} . En este método, también es posible utilizar desplazamientos negativos. Por ejemplo, si utilizamos un desplazamiento de -1, la letra \textbf{'E'}  se convertirá en \textbf{'D'} , mientras que la letra \textbf{'a'}  se convertirá en \textbf{'z'} .
-\\
+Adaptado de \textit{leetcode.com}  por Jes\'us Chaves A.\\[0.1cm]
 
 \noindent
-El profesor les menciona a los estudiantes que este método de cifrado no codifica símbolos que no sean uno de los 26 caracteres del idioma inglés. Por ejemplo, los espacios o los símbolos de puntuación no sufrirán cambio alguno y la letra \textbf{“ñ”} no se considera como parte del alfabeto.
+Juan está emocionado por el lanzamiento de un nuevo juego de cartas llamado \textbf{¡Alcanza el 24!} En este juego,  cada jugador recibe un conjunto de cuatro cartas, donde cada carta 
+representa un número exclusivamente entre 1 y 9. Los jugadores tienen la
+ libertad de organizar y operar estas cartas en cualquier orden 
+utilizando únicamente los operadores aritméticos básicos: $(+, -, *, /)$. 
+El objetivo del juego consiste en que, al explorar todas las 
+combinaciones posibles del conjunto de cartas dado, el resultado de cada
+ combinación debe ser igual a 24.  Sin embargo, existen algunas reglas que debemos considerar:
 
+%Juan, un apasionado programador, está emocionado por el lanzamiento de un nuevo juego de cartas llamado "¡Alcanza el 24!". En este juego, los jugadores deben formar expresiones matemáticas utilizando un mazo de 4 cartas, cada una con números del 1 al 9, y los operadores aritméticos básicos. Con sus habilidades de programación, Juan se ha propuesto crear un programa que explore todas las combinaciones posibles de su mazo en busca de la solución al desafío. Este programa garantizará que ninguna combinación quede sin explorar, permitiéndole determinar el total de posibles expresiones matemáticas que pueden formarse con las cartas disponibles en su mano.
+%\\
+
+%\noindent
+%Cada jugador recibe un conjunto de cuatro cartas, donde cada carta representa un número exclusivamente entre 1 y 9. Los jugadores tienen la libertad de organizar y operar estas cartas en cualquier orden, utilizando únicamente los operadores aritméticos básicos: (+, -, *, /). El objetivo del juego consiste en que, al explorar todas las combinaciones posibles del conjunto de cartas dado, el resultado de cada combinación debe ser igual a 24. Se deben tener las siguientes consideraciones:
+
+
+\begin{itemize}
+    \item En las cartas que se entregan a un jugador no deberán existir números repetidos.
+
+    \item Se puede obtener el 24 como el valor absoluto de una operación. Por ejemplo: $|-3 * 8| = 24$.
+    
+    \item Cada operación debe involucrar exactamente dos números en cada etapa del proceso, es decir: 
+    $$
+    (n_{1}\ op\ n_{2})\ op\ (n_{3}\ op\ n_{4})\ o\ ((n_{1}\ op\ n_{2})\ op\ n_{3})\ op\ n_{4}.$$
+    
+    \item Cada secuencia se considera válida y única si, al calcular el resultado de las parejas en cada paso, se obtienen resultados distintos. Por ejemplo, la secuencia: $[4, 5, 3, 1]$ puede generar $((4 - 1) + 5) * 3$ que a su vez es diferente de $(4 - 1) * (5 + 3)$.
+    
+    \item El operador de división debe devolver un resultado real, no una división entera.
+
+    \item No se pueden concatenar números. Por ejemplo, la siguiente expresión no es válida: $[1, 2, 3, 6]$ --> $12 - 36$.
+
+\end{itemize}
 
 \vspace{1cm}
 {\centering
@@ -17,16 +45,16 @@ El profesor les menciona a los estudiantes que este método de cifrado no codifi
     \hspace{-5mm}
     \begin{itemize}
     
-        \item La entrada estará formada por un número indeterminado de casos de prueba
-        \item Cada caso de prueba consiste en una única línea cuyo primer carácter es el código de la letra 'p', seguido de un mensaje codificado con el método descrito antes. Este mensaje utiliza el desplazamiento adecuado para que la letra 'p' se codifique con ese primer carácter.
-        \item Los casos de prueba terminan con un mensaje que, una vez traducido, contiene exactamente la cadena "FIN". Cuando se lee este mensaje codificado el programa debe finalizar  sin generar ninguna otra salida adicional.
+        \item La primera línea contiene el número de casos de prueba \textbf{\textit{T}}.
+        \item Cada caso de prueba contiene 4 enteros separados por espacios.
+
     \end{itemize}
     \\
     \hline
     \multirow{2}{*}{\textbf{Salida}} &
     \vspace{-4mm}
     \begin{itemize}
-        \item Para cada caso de prueba, el programa indicará el número de vocales que contiene el mensaje codificado
+        \item Para cada caso de prueba, debe imprimir un número entero que indique la cantidad de combinaciones encontradas que dan como resultado 24.
         \end{itemize}
         \\
    \hline
@@ -39,11 +67,18 @@ El profesor les menciona a los estudiantes que este método de cifrado no codifi
     \hline
     & \textbf{Entrada} & \textbf{Salida} \\
     \hline
-    1 & \texttt{pEsta cadena esta sin codificar} & 12 \\
-& \texttt{pfin} & 1 \\
-& \texttt{qbfjpvBFJPV} &  10\\
-& \texttt{xXzwoziui-Um} &  4\\
-& \texttt{qGJO} & \\
+      & 3 & 1 \\
+      & 1 3 4 6 & 7 \\
+      & 1 9 7 3 & 24 \\
+    \centering 1 
+      & 4 1 8 7 &  \\
+      & & \\
+      & & \\
+      
+% \hline
+%     2 &  &  \\
+% \hline
+%     3 &  &  \\
 \hline
 \end{tabular}
 }
