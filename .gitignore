@@ -36,3 +36,6 @@
 
 .DS_Store
 
+# include symlink to TEXMFHOME to this project to handle assets in local compilation
+# of .tex inputs.
+texmf
